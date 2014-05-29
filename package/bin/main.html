@@ -124,11 +124,10 @@
     <ul class="messages"></ul>
 
     <li class="message">
+      <!--<div class="source-content-container">-->
+      <div class="source"></div>
+      <div class="content"></div>
       <div class="timestamp"></div>
-      <div class="source-content-container">
-        <div class="source"></div>
-        <div class="content"></div>
-      </div>
     </li>
 
   </div>
@@ -136,13 +135,10 @@
   <!-- main -->
   <div id="main">
     <div id="main-top-border"></div>
-    <div id="rooms-and-nicks" class="no-nicks">
+    <div id="rooms" class="rooms-and-nicks">
       <div id="rooms-container">
         <h1>rooms</h1>
         <div class="rooms"></div>
-      </div>
-      <div id="nicks-container">
-        <h1>members</h1>
       </div>
     </div>
 
@@ -151,6 +147,7 @@
     <div id="messages-and-input">
       <div id="topic-container">
         <button id="hide-channels" class="topbar-button">=</button>
+        <button id="hide-nicks" class="topbar-button">+</button>
         <div id="status" class="content-item"></div>
       </div>
       <div id="notice" class="hide">
@@ -162,6 +159,12 @@
       <div id="messages-container"></div>
       <div id="nick-and-input">
         <div id="nick"></div><input id="input">
+      </div>
+    </div>
+
+    <div id="nicks" class="rooms-and-nicks">
+      <div id="nicks-container">
+        <h1>members</h1>
       </div>
     </div>
   </div>

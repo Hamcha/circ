@@ -10,29 +10,60 @@
   color: #B33B2D;
 }
 
-.message.update {
+.message.update, .message.update.self {
   color: #00068F;
 }
 
-.message.update.self {
-  color: #005816;
-}
-
-.message.update.privmsg {
+.message.update.privmsg, .message.update.privmsg.self {
   color: #505053;
-}
-
-.message.update.privmsg.self {
-  color: gray;
 }
 
 .message.update.privmsg.mention {
   color: darkred;
 }
 
+.message .empty { display: none;}
+.message.update.privmsg .empty { display: table-cell; content: "&nbsp;"; }
+.message.system,
+.message.group.other,
+.message.welcome,
+.message.topic_info,
+.message.topic,
+.message.join,
+.message.part,
+.message.connect,
+.message.nick,
+.message.quit {
+  background-color: #def;
+  color: #369;
+  padding: 2px 5px;
+  padding-right: 75px;
+}
+
+.message.action {
+  background-color: #eef;
+  color: #339;
+  padding: 2px 5px;
+  padding-right: 75px;
+}
+
+.message.system .timestamp,
+.message.other .timestamp ,
+.message.topic_info .timestamp ,
+.message.topic .timestamp ,
+.message.join .timestamp ,
+.message.part .timestamp ,
+.message.connect .timestamp,
+.message.nick .timestamp,
+.message.quit .timestamp,
+.message.action .timestamp {
+  color: #369;
+}
+
 .message.update.privmsg.mention .source {
   font-weight: bold;
 }
+
 
 .message.update.privmsg.direct .source {
   color: #488AA8;

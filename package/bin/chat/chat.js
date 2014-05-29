@@ -75,9 +75,13 @@
       var _this = this;
       this.winList = new chat.WindowList;
       this.notice = new chat.Notice;
+      this.toggleNickDisplay = $('#hide-nicks');
+      this.toggleNickDisplay.click(function() {
+        $('#nicks')[0].classList.toggle('hidden');
+      });
       this.toggleChannelDisplay = $('#hide-channels');
       this.toggleChannelDisplay.click(function() {
-        $('#rooms-and-nicks')[0].classList.toggle('hidden');
+        $('#rooms')[0].classList.toggle('hidden');
       });
       this.channelDisplay = new chat.ChannelList();
       this.channelDisplay.on('clicked', function(server, chan) {
@@ -688,18 +692,6 @@
        * emits message to script handler, which decides if it should send it back
     */
 
-
-    Chat.prototype.displayMessage = function() {
-      var args, context, event, name;
-      name = arguments[0], context = arguments[1], args = 3 <= arguments.length ? __slice.call(arguments, 2) : [];
-      event = (function(func, args, ctor) {
-        ctor.prototype = func.prototype;
-        var child = new ctor, result = func.apply(child, args);
-        return Object(result) === result ? result : child;
-      })(Event, ['message', name].concat(__slice.call(args)), function(){});
-      event.setContext(context.server, context.channel);
-      return this.emit(event.type, event);
-    };
 
     Chat.prototype.displayMessage = function() {
       var args, context, event, name;
