@@ -19,7 +19,7 @@
 }
 
 .message.update.privmsg.mention {
-  color: darkred;
+  color: #281;
 }
 
 .message .empty { display: none;}
@@ -33,7 +33,9 @@
 .message.part,
 .message.connect,
 .message.nick,
-.message.quit {
+.message.quit,
+.message.mode,
+.message.kick {
   background-color: #def;
   color: #369;
   padding: 2px 5px;
@@ -47,6 +49,11 @@
   padding-right: 75px;
 }
 
+.message.action .source, .message.action .empty,
+.message.update.privmsg.action .empty {
+  display: none;
+}
+
 .message.system .timestamp,
 .message.other .timestamp ,
 .message.topic_info .timestamp ,
@@ -56,7 +63,9 @@
 .message.connect .timestamp,
 .message.nick .timestamp,
 .message.quit .timestamp,
-.message.action .timestamp {
+.message.action .timestamp,
+.message.mode .timestamp,
+.message.kick .timestamp {
   color: #369;
 }
 
@@ -65,14 +74,19 @@
 }
 
 
-.message.update.privmsg.direct .source {
-  color: #488AA8;
+.message.update.privmsg.direct {
+  background-color: #f2fae3;
+  color: #659f13;
 }
 
-.message.update.privmsg.notice .source {
-  color: #97008B;
+.message.update.privmsg.notice {
+  background-color: #f2fae3;
+  color: #659f13;
 }
 
+.message.notice .source, .message.direct .source {
+  background-color: #f2fae3;
+}
 /* Nickname Colors. Taken from Textual */
 
 .message.update.privmsg.self .source-content-container .source {
